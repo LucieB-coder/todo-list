@@ -51,7 +51,7 @@ export default function App() {
   // On ne garde que les tâches qui correspondent au filtre sélectionné
   const tachesAffichees = taches.filter((tache) => {
     if (filtre === 'a-faire') return !tache.terminee;
-    if (filtre === 'terminees') return !tache.terminee;
+    if (filtre === 'terminees') return tache.terminee;
     return true;
   });
 
