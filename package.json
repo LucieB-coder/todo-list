@@ -1,0 +1,27 @@
+{
+  "name": "duoday-todo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n back,front -c blue,magenta \"npm:dev:back\" \"npm:dev:front\"",
+    "dev:back": "node --watch server/index.ts",
+    "dev:front": "vite",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "express": "4.21.2",
+    "mongodb": "^6.10.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^24.10.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "concurrently": "9.1.0",
+    "typescript": "^5.9.3",
+    "vite": "5.4.11"
+  }
+}
