@@ -34,7 +34,7 @@ app.get('/api/todos', async (req, res) => {
 
 // Ajouter une tâche
 app.post('/api/todos', async (req, res) => {
-  const titre = req.body.title;
+  const titre = req.body.titre;
 
   if (!titre || titre.trim() === '') {
     return res.status(400).json({ erreur: 'Le titre de la tâche est obligatoire.' });
